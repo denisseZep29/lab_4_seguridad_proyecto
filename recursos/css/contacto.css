@@ -1,0 +1,123 @@
+/* CSS General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E2749;
+    color: #FAFAFF;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* Sección de Contacto */
+.contact-section {
+    background-color: #273469;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-section h1 {
+    font-size: 2em;
+    color: #E4D9FF; /* Títulos */
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    color: #D1D1E9; /* Texto adicional */
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px; /* Asegura un padding uniforme a los lados */
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: #D1D1E9;
+    color: #1E2749;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño total */
+}
+
+
+.contact-form button {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #273469;
+    color: #FAFAFF;
+    border: 1px solid #FAFAFF;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #E28B8B;
+    color: #FAFAFF;
+}
+
+/* Contenedor de las tarjetas de información */
+.info-section-container {
+    display: flex;
+    gap: 20px; /* Espacio entre las tarjetas */
+    width: 100%;
+    max-width: 681px;
+    margin-top: 30px;
+}
+
+/* Estilos para cada tarjeta de información */
+.info-card {
+    background-color: #273469;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Para que ambas tarjetas ocupen el mismo ancho */
+    color: #FAFAFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.19);
+}
+
+.info-card h2 {
+    font-size: 1.5em;
+    color: #E4D9FF;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #D1D1E9;
+    margin: 8px 0;
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.message.success {
+    color: #2ecc71;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    color: #e74c3c;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}

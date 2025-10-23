@@ -1,0 +1,145 @@
+/* General para el body */
+body {
+    background: #1E2749;
+    font-family: 'Open Sans', sans-serif;
+    color: #FAFAFF;
+    margin: 0;
+    display: flex; /* Mantener la barra lateral y el contenido alineados */
+    height: 100vh; /* Altura completa de la pantalla */
+    overflow: hidden; /* Evitar el scroll horizontal global */
+}
+
+/* Barra lateral fija */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #273469; /* Fondo del menú */
+    width: 80px; /* Ancho fijo de la barra lateral */
+    height: 100vh; /* Altura completa */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Siempre por encima del contenido */
+}
+
+/* Menú de la barra lateral */
+.navbar__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__item {
+    margin-bottom: 1rem;
+}
+
+.navbar__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 72px;
+    color: #D1D1E9; /* Color de los íconos */
+    transition: 250ms ease all;
+}
+
+.navbar__link span {
+    position: absolute;
+    left: 100%;
+    transform: translateX(-20px);
+    margin-left: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    color: #FAFAFF; /* Texto del tooltip */
+    background: #273469; /* Fondo del tooltip */
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: 250ms ease all;
+}
+
+.navbar__link:hover {
+    color: #FAFAFF; /* Íconos en hover */
+}
+
+.navbar:not(:hover) .navbar__link:focus,
+.navbar__link:hover span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Contenido principal desplazable */
+.admin-dashboard {
+    margin-left: 80px; /* Espacio reservado para la barra lateral */
+    width: calc(100% - 80px); /* Resto del ancho para el contenido */
+    height: 100vh; /* Altura completa de la ventana */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    padding: 1rem;
+    background: #1E2749; /* Fondo del contenido principal */
+}
+
+/* Hover para los íconos */
+.navbar__link:hover {
+    background: #324fb0;
+    border-radius: 8px;
+}
+
+/* Estilo del encabezado */
+.dashboard-header {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo de las tarjetas */
+.card {
+    background: #273469;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #FAFAFF;
+}
+
+.card h2 {
+    margin: 0;
+    color: #E4D9FF;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #406ff3;
+    color: #FAFAFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.card a:hover {
+    background: #324fb0;
+}
+
+/* Ajuste para diseño responsivo */
+@media (max-width: 768px) {
+    .navbar {
+        width: 60px;
+    }
+
+    .navbar__link span {
+        display: none; /* Ocultar el texto del tooltip en pantallas pequeñas */
+    }
+
+    .admin-dashboard {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+    }
+}

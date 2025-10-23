@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Sign In/Sign Up</title>
+    <link href="../recursos/css/LogInSignUp.css" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="container">
+    <!-- Sign Up Form -->
+    <div class="form-container sign-up-container">
+        <form action="../acciones/register.php" method="POST">
+            <h1>Create Account</h1>
+            <span>Use email for registration</span>
+            <input name="name" placeholder="Name" required type="text"/>
+            <input name="email" placeholder="Email" required type="email"/>
+            <input name="password" placeholder="Password" required type="password"/>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Sign In Form -->
+    <div class="form-container sign-in-container">
+        <form action="../acciones/login.php" method="POST">
+            <h1>Sign in</h1>
+            <span>Use your account</span>
+            <input name="email" placeholder="Email" required type="email"/>
+            <input name="password" placeholder="Password" required type="password"/>
+            <a href="#" id="forgotPasswordLink">Forgot your password?</a>
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div class="form-container forgot-password-container">
+        <form id="resetPasswordForm" action="../acciones/reset_password.php" method="POST">
+            <h1>Reset Password</h1>
+            <span>Enter your email and new password</span>
+            <input name="email" placeholder="Email" required type="email"/>
+            <input name="new-password" placeholder="New Password" required type="password"/>
+            <input name="confirm-password" placeholder="Confirm New Password" required type="password"/>
+            <button type="submit">Reset Password</button>
+            <a href="#" id="backToSignIn">Back to Sign In</a>
+            <!-- Contenedor para mensajes de éxito/error -->
+            <p id="resetPasswordMessage" class="message"></p>
+        </form>
+    </div>
+
+
+    <!-- Overlay -->
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Botón para regresar a la página de inicio (index.html) -->
+<div class="back-home-container">
+    <a href="../publico/inicio.html" class="back-home-button">Back to Home</a>
+</div>
+
+<script src="../recursos/js/LogInSignUp.js"></script>
+</body>
+</html>

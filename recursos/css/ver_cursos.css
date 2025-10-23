@@ -1,0 +1,165 @@
+/* General */
+body {
+    background: #1E2749;
+    font-family: 'Open Sans', sans-serif;
+    color: #FAFAFF;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evitamos scroll global, se gestiona en el contenedor */
+    height: 100vh; /* Forzamos que ocupe toda la ventana */
+    display: flex;
+}
+
+/* Contenedor principal */
+.curso-dashboard {
+    padding-left: 6rem; /* Separación desde la barra lateral */
+    width: calc(100% - 6rem); /* Ajustar el ancho respetando el espacio de la barra lateral */
+    height: 100vh; /* Ocupar toda la altura de la pantalla */
+    overflow: hidden; /* Evitamos scroll en este nivel */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Scroll dentro del contenedor */
+.curso-scrollable {
+    flex: 1;
+    overflow-y: auto; /* Habilitamos desplazamiento vertical */
+    padding: 2rem; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que padding no altere el ancho total */
+}
+
+/* Encabezado del dashboard */
+.curso-header {
+    margin-bottom: 2rem;
+    text-align: center; /* Centramos el contenido */
+}
+
+.curso-header h1 {
+    font-size: 2rem;
+    color: #E4D9FF;
+    margin-bottom: 1rem;
+}
+
+.curso-header p {
+    color: #D1D1E9;
+    margin-bottom: 1rem;
+}
+
+/* Barra de búsqueda */
+.curso-header input {
+    width: 60%;
+    max-width: 600px; /* Máximo ancho */
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background: #273469;
+    color: #FAFAFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Asegura centrado horizontal */
+}
+
+.curso-header input::placeholder {
+    color: #D1D1E9;
+}
+
+/* Contenedor de cursos */
+.cursos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dinámico, mínimo 250px */
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+    justify-items: center; /* Asegura que las tarjetas estén centradas */
+}
+
+/* Tarjetas de curso */
+.curso-card {
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 300px; /* Ancho máximo */
+    background: #273469;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px); /* Animación al pasar el mouse */
+}
+
+/* Miniatura del curso */
+.curso-thumbnail img {
+    width: 100%;
+    height: 150px; /* Altura uniforme */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Contenido del curso */
+.curso-content h2 {
+    font-size: 1.2rem;
+    color: #E4D9FF;
+    margin: 0.5rem 0;
+}
+
+.curso-content p {
+    color: #D1D1E9;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.5;
+}
+
+/* Botón de inscribirse */
+.btn-inscribirse {
+    background-color: #406ff3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscribirse:hover {
+    background-color: #324fb0; /* Color más oscuro al pasar el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .curso-header input {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cursos-container {
+        grid-template-columns: repeat(3, 1fr); /* Reduce a 3 columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .cursos-container {
+        grid-template-columns: repeat(2, 1fr); /* Reduce a 2 columnas */
+    }
+
+    .curso-header input {
+        width: 80%; /* Más ancho en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .cursos-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .curso-header input {
+        width: 90%; /* Ajustar al máximo disponible */
+    }
+}

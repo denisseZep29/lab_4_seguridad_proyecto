@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E2749;
+    color: #FAFAFF;
+}
+
+.admin-dashboard {
+    margin-left: 80px; /* Espacio para la barra lateral */
+    padding: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #E4D9FF;
+}
+
+.dashboard-header p {
+    color: #D1D1E9;
+}
+
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #273469;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #E4D9FF;
+}
+
+.card p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #D1D1E9;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #406ff3;
+    color: #FAFAFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background-color: #314cc8;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.chart-container {
+    background-color: #273469;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.chart-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #E4D9FF;
+}
+
+canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* Para cuando no hay mensajes */
+.no-messages {
+    background: #273469;
+    color: #FAFAFF;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.no-messages h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #E4D9FF;
+}
+
+.no-messages p {
+    font-size: 1.2rem;
+    color: #D1D1E9;
+}
+
+/* Estilo de las tarjetas de mensaje */
+.message-card {
+    background: #273469;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #FAFAFF;
+    position: relative;
+}
+
+.message-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #E4D9FF;
+}
+
+.message-card p {
+    margin: 1rem 0;
+    line-height: 1.5;
+    color: #D1D1E9;
+}
+
+.message-card small {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #B0B0C8;
+}
+
+/* Formulario de respuesta */
+.reply-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.reply-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    color: #1E2749;
+}
+
+.reply-form button {
+    background: #406FF3;
+    border: none;
+    border-radius: 5px;
+    color: #FAFAFF;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.reply-form button:hover {
+    background: #324FB0;
+}
+

@@ -1,0 +1,220 @@
+/* Ajustes generales para asegurar que el footer esté fijo en la parte inferior */
+body {
+    background: #1E2749;
+    font-family: 'Open Sans', sans-serif;
+    color: #FAFAFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* La página ocupa toda la altura de la pantalla */
+}
+
+/* Contenedor de los botones Mi Perfil y Cerrar Sesión */
+.user-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Botón Mi Perfil */
+#MiPerfil {
+    display: block;
+    padding: 10px 30px;
+    background-color: #FAFAFF; /* Color claro de la paleta */
+    color: #1E2749; /* Texto oscuro */
+    border-radius: 20px; /* Borde redondeado completo */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.15); /* Sombra para dar efecto de superposición */
+    transition: background 0.3s, transform 0.2s;
+    margin-right: -10px; /* Ajustar la superposición */
+}
+
+#MiPerfil:hover {
+    background-color: #E4D9FF; /* Hover lila */
+}
+
+/* Botón Cerrar Sesión */
+#CerrarSesion {
+    display: block;
+    padding: 10px 30px 10px 50px;
+    background-color: #273469; /* Azul oscuro de la paleta */
+    color: #FAFAFF; /* Texto claro */
+    border-radius: 20px; /* Borde redondeado completo */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.15); /* Sombra para dar efecto de superposición */
+    transition: background 0.3s, transform 0.2s;
+    margin-left: -26px; /* Ajustar la superposición */
+}
+
+#CerrarSesion:hover {
+    background-color: #E4D9FF; /* Hover lila */
+    color: #1E2749;
+}
+
+
+.cursos-dashboard {
+    padding: 2rem;
+    text-align: center;
+    flex: 1; /* Esto permite que el contenido crezca y empuje el footer hacia abajo */
+}
+
+.dashboard-header {
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+    padding-top: 20px;
+    font-size: 2rem;
+    color: #E4D9FF;
+    text-align: center; /* Centrar texto */
+}
+
+.dashboard-header p {
+    color: #D1D1E9;
+    text-align: center; /* Centrar texto */
+}
+
+.search-bar {
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background: #273469;
+    color: #FAFAFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input::placeholder {
+    color: #D1D1E9;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.course-card {
+    background: #273469;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-thumbnail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.course-content h2 {
+    font-size: 1.2rem;
+    color: #E4D9FF;
+    margin-bottom: 0.5rem;
+}
+
+.course-content p {
+    color: #D1D1E9;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.btn-inscribirse {
+    background-color: #406ff3;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Botones redondeados */
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    transition: all 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Eliminar subrayado para enlaces */
+    display: inline-block;
+}
+
+.btn-inscribirse:hover {
+    background-color: #324fb0; /* Color más oscuro al pasar el mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+
+/* Footer fijo al fondo */
+.footer {
+    background-color: #1E2749;
+    color: #a5a5a5;
+    padding: 10px 20px; /* Reducir el padding para hacerlo más compacto */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    border-top: none; /* Eliminar cualquier borde superior o línea */
+}
+
+.footer .company-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .company-logo {
+    width: 36px; /* Ajustar el tamaño del logo */
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .company-logo img {
+    width: 100%; /* Ajustar la imagen al contenedor */
+    height: 100%;
+    object-fit: cover; /* Asegurarse de que se vea bien en el contenedor */
+}
+
+.footer .social-icons a {
+    margin-left: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer .social-icons img {
+    width: 18px;
+    height: 18px;
+    transition: opacity 0.3s;
+}
+
+.footer .social-icons a:hover img {
+    opacity: 0.7; /* Efecto hover */
+}

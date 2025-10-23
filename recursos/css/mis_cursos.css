@@ -1,0 +1,154 @@
+body {
+    background: #1E2749;
+    font-family: 'Open Sans', sans-serif;
+    color: #FAFAFF;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dashboard */
+.curso-dashboard {
+    padding-left: 6rem; /* Espaciado para la barra lateral */
+    width: calc(100% - 6rem); /* Ajustar el ancho respetando la barra lateral */
+    height: 100vh; /* Ocupar toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Evitar el scroll global */
+}
+
+.curso-scrollable {
+    flex: 1; /* Ocupa todo el espacio restante */
+    overflow-y: auto; /* Permite desplazamiento vertical */
+    padding: 2rem;
+    box-sizing: border-box; /* Asegura que el padding no afecta el tamaño */
+}
+
+/* Encabezado */
+.curso-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.curso-header h1 {
+    font-size: 2rem;
+    color: #E4D9FF;
+}
+
+.curso-header p {
+    color: #D1D1E9;
+}
+
+/* Contenedor de cursos */
+.cursos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tarjetas dinámicas */
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Tarjeta de curso */
+.curso-card {
+    max-width: 300px; /* Mismo ancho que en "Ver Cursos" */
+    background: #273469;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out;
+}
+
+.curso-card:hover {
+    transform: translateY(-5px); /* Animación de hover */
+}
+
+.curso-thumbnail img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Título y descripción */
+.curso-content h2 {
+    font-size: 1.2rem;
+    color: #E4D9FF;
+    margin-bottom: 0.5rem;
+}
+
+.curso-content p {
+    color: #D1D1E9;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Botón "Completar" */
+.btn-completar {
+    background-color: #32cd32; /* Verde */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-completar:hover {
+    background-color: #28a428; /* Verde más oscuro */
+}
+
+.btn-completar.completado {
+    background-color: #d3d3d3; /* Gris claro */
+    color: #6c757d; /* Texto gris oscuro */
+    cursor: not-allowed;
+}
+
+/* Botón "Ir al curso" */
+.btn-ver-curso {
+    background-color: #406ff3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-curso:hover {
+    background-color: #324fb0; /* Azul más oscuro */
+}
+
+/* Contenedor de botones */
+.curso-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+    .cursos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+@media (max-width: 768px) {
+    .cursos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .cursos-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+}

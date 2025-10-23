@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E2749;
+    color: #FAFAFF;
+}
+
+.admin-dashboard {
+    margin-left: 80px; /* Espacio para la barra lateral */
+    padding: 20px;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    margin: 10px;
+    font-size: 2.5rem;
+    color: #E4D9FF;
+}
+
+.dashboard-header p {
+    color: #D1D1E9;
+}
+
+.dashboard-overview {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de la tabla de usuarios */
+.user-table-container {
+    width: 60%; /* Ocupa el 60% del ancho */
+    margin-right: 2%;
+    float: left; /* Para ubicar el contenedor a la izquierda */
+    padding-bottom: 20px;
+}
+
+.user-table-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #E4D9FF;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #406ff3;
+    border-radius: 8px;
+    background: #FAFAFF;
+    color: #1E2749;
+    font-size: 14px;
+}
+
+/* Tabla de usuarios */
+/* Ocultar barra de desplazamiento pero mantener el scroll funcional */
+.user-table-wrapper {
+    max-height: 500px; /* Scroll si hay demasiados usuarios */
+    overflow-y: auto;
+    background: #273469;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scrollbar-width: none; /* Para navegadores como Firefox */
+    -ms-overflow-style: none; /* Para navegadores como Edge */
+}
+
+.user-table-wrapper::-webkit-scrollbar {
+    display: none; /* Ocultar barra de desplazamiento en Chrome, Safari y Edge */
+}
+
+
+.user-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #273469;
+}
+
+.user-table-wrapper thead {
+    background: #324fb0;
+}
+
+.user-table-wrapper th {
+    text-align: left;
+    padding: 10px;
+    color: #FAFAFF;
+    font-size: 14px;
+}
+
+.user-table-wrapper td {
+    padding: 10px;
+    color: #D1D1E9;
+    font-size: 14px;
+    border-top: 1px solid #324fb0;
+}
+
+.user-table-wrapper tr:hover {
+    background: #406ff3;
+    color: #FAFAFF;
+}
+
+/* Botones de acciones en la tabla */
+.edit-btn, .delete-btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    font-size: 14px;
+    color: #FAFAFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.edit-btn {
+    background: #406ff3;
+}
+
+.edit-btn:hover {
+    background: #324fb0;
+}
+
+.delete-btn {
+    background: #ff4d4d;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+/* Contenedor del formulario */
+/* Normalizar box-sizing para garantizar consistencia */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Contenedor del formulario */
+.add-user-form-container {
+    width: 30%; /* Ajuste del ancho del formulario */
+    float: right; /* Se ubica a la derecha */
+    background: #273469;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-user-form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #E4D9FF;
+    position: relative;
+}
+
+.add-user-form-container h2::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background: #406ff3;
+    margin: 0.5rem auto 1rem;
+    border-radius: 8px;
+}
+
+/* Inputs y selects */
+.add-user-form-container input,
+.add-user-form-container select {
+    display: block;
+    width: calc(100% - 24px); /* Ajuste para que todo ocupe el mismo ancho */
+    padding: 12px;
+    margin: 0 auto 15px; /* Centramos y separamos verticalmente */
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #FAFAFF;
+    color: #1E2749;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-user-form-container input:focus,
+.add-user-form-container select:focus {
+    outline: none;
+    border: 1px solid #406ff3;
+    box-shadow: 0 0 5px #406ff3;
+}
+
+/* Botón */
+.add-user-form-container button {
+    display: block;
+    width: calc(100% - 24px); /* Mismo ancho que los campos */
+    padding: 12px;
+    margin: 0 auto;
+    background: #406ff3;
+    color: #FAFAFF;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-user-form-container button:hover {
+    background: #324fb0;
+}
+
+/* Ajuste adicional para alinear mejor el último input */
+.add-user-form-container input:last-of-type,
+.add-user-form-container select {
+    margin-bottom: 20px;
+}
+
+
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+    .user-table-container,
+    .add-user-form-container {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+/* Poqup*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #273469;
+    padding: 30px;
+    border-radius: 15px;
+    width: 450px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #E4D9FF;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input,
+.modal-content select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #406ff3;
+    width: 100%;
+    background-color: #1E2749;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    border-color: #63a4ff;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1;
+}
+
+.btn-confirm {
+    background-color: #406ff3;
+    color: #ffffff;
+}
+
+.btn-confirm:hover {
+    background-color: #324fb0;
+}
+
+.btn-cancel {
+    background-color: #ff5c5c;
+    color: #ffffff;
+}
+
+.btn-cancel:hover {
+    background-color: #d9534f;
+}
+
+/* Estilo del botón de cerrar */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ff5c5c;
+}
+
+.view-courses-btn {
+    background-color: #d7c9ff;
+    color: #1E2749; /* Texto oscuro */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.view-courses-btn:hover {
+    background: #c8adff; /* Amarillo más oscuro al pasar el mouse */
+}
+
+
+/* Modal para ver cursos inscritos */
+#coursesModal .modal-content {
+    text-align: center;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 20px;
+    background: #1E2749;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+/* Ocultar barra de desplazamiento pero permitir scroll */
+#coursesModal .modal-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Edge */
+}
+
+#coursesModal .modal-content {
+    -ms-overflow-style: none; /* Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Contenedor de cursos */
+#coursesList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+
+#coursesModal h3 {
+    font-size: 1.8rem;
+    color: #E4D9FF;
+    margin-bottom: 15px;
+}
+
+#coursesModal p#userName {
+    font-size: 1.2rem;
+    color: #D1D1E9;
+    margin-bottom: 20px;
+}
+
+#coursesList .course-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background: #324fb0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#coursesList .course-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+#coursesList .course-item h4 {
+    font-size: 1.3rem;
+    color: #FAFAFF;
+    margin: 0;
+    font-weight: bold;
+}
+
+#coursesList .course-item p {
+    font-size: 1rem;
+    color: #D1D1E9;
+    margin: 0;
+    line-height: 1.4;
+}

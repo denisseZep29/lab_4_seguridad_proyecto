@@ -1,0 +1,349 @@
+/* CSS General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E2749;
+    color: #FAFAFF;
+    margin: 0;
+}
+
+/* Hero Búsqueda */
+.hero-busqueda {
+    text-align: center;
+    padding: 60px 20px;
+    color: #FAFAFF;
+    position: relative;
+    min-height: 500px; /* Aumenta la altura mínima para que haya más espacio */
+}
+
+.hero-busqueda .image-container {
+    position: absolute;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra la imagen horizontalmente */
+    width: 100%; /* Ajusta el tamaño de la imagen */
+    max-width: 900px; /* Limita el ancho máximo de la imagen */
+    opacity: 0.8;
+}
+
+.hero-busqueda .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-busqueda h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #E4D9FF;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-busqueda p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #FAFAFF;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-busqueda .explore-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #FAFAFF;
+    color: #1E2749;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-busqueda .explore-btn:hover {
+    background-color: #E4D9FF;
+    color: #1E2749;
+}
+
+/* Sección de Información */
+.info-section {
+    padding: 60px 20px;
+    background-color: #1E2749;
+    color: #FAFAFF;
+}
+
+/* Cards Informativas */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    gap: 60px;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start; /* Alinea los iconos más arriba en comparación con el texto */
+    background: none;
+    text-align: left;
+    max-width: 250px;
+    margin: 0 15px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #E4D9FF;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 15px;
+    margin-top: -5px; /* Ajusta este valor para subir el icono */
+}
+
+
+.icon img {
+    width: 50%; /* Ajusta el tamaño del icono dentro del círculo */
+    height: auto;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FAFAFF;
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #D1D1E9;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* Sección de Bienvenida */
+.welcome-section {
+    display: flex;
+    align-items: flex-start; /* Alinea el texto en la parte superior */
+    justify-content: center;
+    gap: 30px;
+    background-color: #1E2749; /* Fondo oscuro */
+    color: #FAFAFF; /* Texto claro */
+}
+
+.welcome-image {
+    max-width: 450px; /* Ajusta este valor al tamaño deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.welcome-content {
+    max-width: 50%;
+    margin-top: 25px;
+}
+
+.welcome-content h2 {
+    font-size: 32px;
+    color: #E4D9FF; /* Color lila para el título */
+    margin-bottom: 15px;
+}
+
+.welcome-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #D1D1E9;
+    margin-bottom: 20px;
+}
+
+.view-all-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #E4D9FF;
+    color: #1E2749;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s;
+}
+
+.view-all-btn:hover {
+    background-color: #FAFAFF;
+    color: #1E2749;
+}
+
+/* Sección confiable */
+.educators-section {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1200px;
+    gap: 140px;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin: 0 auto; /* Centra la sección completa en la página */
+    padding: 20px 0 50px 0; /* Espaciado opcional arriba y abajo */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-content {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.text-content h3 {
+    font-size: 20px;
+    color: #FAFAFF;
+    font-weight: 400;
+}
+
+.text-content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #FAFAFF;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #FAFAFF;
+    line-height: 1.6;
+}
+
+.illustration img {
+    width: 500px;
+    max-width: 100%;
+}
+
+.right-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center; /* Centra el contenedor de la cruz horizontalmente */
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Línea circular detrás de los círculos */
+.stats-container::before {
+    content: '';
+    position: absolute;
+    width: 350px; /* Ajusta este tamaño según necesites */
+    height: 350px; /* Ajusta este tamaño según necesites */
+    border: 2px solid #ddd; /* Color y grosor de la línea circular */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Coloca la línea detrás de los círculos */
+}
+
+.stat-item {
+    background: #fff;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-center {
+    background: #fff;
+    border-radius: 50%;
+    width: 90px; /* Tamaño reducido para el círculo central */
+    height: 90px; /* Tamaño reducido para el círculo central */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+
+.center-image {
+    width: 50%; /* Ajusta el tamaño de la imagen dentro del círculo */
+    height: 50%;
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro sin distorsión */
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.stat-item:nth-child(1) .stat-number {
+    color: #ff4a57;
+}
+
+.stat-item:nth-child(2) .stat-number {
+    color: #53c3f4;
+}
+
+.stat-item:nth-child(4) .stat-number {
+    color: #4bd5c4;
+}
+
+.stat-item:nth-child(5) .stat-number {
+    color: #ffb74d;
+}
+
+/* Posición en la cuadrícula en forma de cruz */
+.stat-item:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.stat-item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.stat-item:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.stat-item:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+}

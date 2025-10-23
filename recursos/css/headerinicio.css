@@ -1,0 +1,103 @@
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* Mantén solo 10px de padding superior */
+    background-color: #1E2749;
+    position: relative;
+    overflow: visible; /* Permite que el logo se extienda fuera del contenedor */
+}
+
+/* Logo flotante */
+.logo {
+    position: absolute;
+    top: 5px; /* Ajusta este valor para que el logo flote sobre el encabezado */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%);
+    max-width: 100px; /* Tamaño del logo */
+    z-index: 1; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+.logo img {
+    width: 100%; /* Ajusta el tamaño de la imagen al contenedor del logo */
+    height: auto;
+}
+
+/* Navegación */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-right: 7px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px 20px;
+    background-color: #273469;
+    color: #FAFAFF;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #E4D9FF; /* Hover lila */
+    color: #1E2749;
+}
+
+/* Contenedor de los botones Sign Up y Log In */
+.np-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Botón Sign Up */
+#SignUp {
+    display: block;
+    padding: 10px 30px;
+    background-color: #FAFAFF; /* Color claro de la paleta */
+    color: #1E2749; /* Texto oscuro */
+    border-radius: 20px; /* Borde redondeado completo */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.15); /* Sombra para dar efecto de superposición */
+    transition: background 0.3s, transform 0.2s;
+    margin-right: -10px; /* Ajustar la superposición */
+}
+
+#SignUp:hover {
+    background-color: #E4D9FF; /* Hover lila */
+}
+
+/* Botón Log In */
+#LogIn {
+    display: block;
+    padding: 10px 30px 10px 50px;
+    background-color: #273469; /* Azul oscuro de la paleta */
+    color: #FAFAFF; /* Texto claro */
+    border-radius: 20px; /* Borde redondeado completo */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 0 6px rgba(0, 0, 0, 0.15); /* Sombra para dar efecto de superposición */
+    transition: background 0.3s, transform 0.2s;
+    margin-left: -26px; /* Ajustar la superposición */
+}
+
+#LogIn:hover {
+    background-color: #E4D9FF; /* Hover lila */
+    color: #1E2749;
+}
